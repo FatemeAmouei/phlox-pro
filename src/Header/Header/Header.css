@@ -1,0 +1,81 @@
+.header-container {
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+.header {
+  display: flex;
+  height: 250vh;
+  max-height: 100vh !important;
+  background-color: #21252b;
+  border-radius: 50px;
+  margin: 0 3rem;
+
+}
+
+.header-background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-background img {
+  position: absolute;
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+  top: -75%;
+  left: -10%;
+  z-index: 100;
+
+}
+
+.header-right {
+  width: auto;
+  margin-top: 30rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+
+.header-subtitle {
+  font-size: 1.3rem;
+  text-align: right;
+  padding-right: 7rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #858585;
+}
+
+.header-title {
+  font-size: 6rem;
+  text-align: right;
+  padding-right: 7rem;
+  line-height: 8rem;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 900;
+  margin-bottom: 5rem;
+}
+
+.header-btn {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  display: block;
+  margin-right: 7rem;
+  border-radius: 50px;
+}
+
+.header-btn:hover {
+  border-color: #ffd62c;
+  background-color: #000;
+  color: #fff;
+}
+
+.header-circle {
+  position: "absolute";
+  border-radius: 50%;
+
+}

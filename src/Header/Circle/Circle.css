@@ -1,0 +1,10 @@
+.header-circle {
+  position: relative;
+
+}
+
+
+.header-circle {
+  position: absolute;
+  border-radius: 50%;
+}

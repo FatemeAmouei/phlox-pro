@@ -1,19 +1,16 @@
 .main-container {
   background-color: rgba(1, 1, 1, 0.9);
   padding-top: 4rem;
-
 }
 
 .main {
   display: flex;
-
 }
 
 .main-left {
   flex: 2;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .main-right {
@@ -28,22 +25,14 @@
   height: 45vh;
   margin: 2rem;
   border-radius: 50px;
-
 }
-
-
-
-
 
 .main-left__container {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
   overflow: hidden;
-
 }
-
-.main-right__container {}
 
 .main-leftelementor__img,
 .main-rightelementor__img {
@@ -132,7 +121,6 @@
 .main-leftelementor__parg,
 .main-rightelementor__parg {
   text-decoration: none;
-
 }
 
 .main-leftelementor__list,

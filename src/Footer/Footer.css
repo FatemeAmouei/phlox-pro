@@ -1,0 +1,158 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  direction: rtl;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  justify-content: space-between;
+  background-color: #000;
+  padding-top: 3rem;
+}
+
+.footer-top__right {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 2rem;
+
+}
+
+.footer-right__img {
+  width: 190px;
+  height: 110px;
+}
+
+.footer-right__text {
+  color: #fefefe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.footer-right__icons {
+  color: #fff;
+  display: flex;
+  justify-content: start;
+  padding-top: 2rem;
+}
+
+.footer-right__icon {
+  padding-left: 1rem;
+
+}
+
+.footer-right__icon:hover {
+  color: #f5c506;
+}
+
+.footer-top__center {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding: 3rem;
+
+}
+
+.col1,
+.col2,
+.col3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-center__sub {
+  text-decoration: none;
+  color: #d7d2d2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+
+.footer-center__sub:hover {
+  color: #f5c506;
+}
+
+.footer-top__left {
+  width: 30%;
+  padding: 3rem;
+}
+
+.footer-left__title,
+.footer-center__title {
+  color: #fefefe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer-left__text {
+  color: #FFFFFF94;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: justify;
+  padding-top: 1rem;
+}
+
+.footer-left__btns {
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.footer-left__input {
+  background-color: #2b3038;
+  position: absolute;
+  padding: 1.7rem 8rem;
+  border-radius: 50px;
+}
+
+.footer-left__input:focus {
+  border: 2px solid #f5c506;
+}
+
+.footer-left__btn {
+  background-color: #f5c506;
+  color: #000;
+  position: relative;
+  top: 28px;
+  left: -62%;
+  padding: 1.3rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.copyright {
+  color: #FFFFFF94;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  direction: rtl;
+  padding: 2rem;
+}
+
+.copyright span {
+  color: #f5c506;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  direction: rtl;
+}

@@ -1,0 +1,102 @@
+.Swiper-slider {
+  background-color: #1a1a1a;
+  padding: 10rem 4rem 5rem 4rem;
+  position: relative;
+}
+
+.Swiper-slider::before,
+.Swiper-slider::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #fefefe;
+  opacity: 0.3;
+  top: 62%;
+}
+
+.Swiper-slider::before {
+  left: 3%;
+}
+
+.Swiper-slider::after {
+  right: 2%;
+}
+
+.slide-title {
+  color: #fefefe;
+  opacity: 0.3;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+}
+
+.slide-title:hover {
+  color: #f5c506;
+}
+
+.title1-span1 {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+
+.title1-span2 {
+  font-size: 2rem;
+  display: block;
+  transform: rotate(180deg);
+  text-align: center;
+}
+
+.title2-span1 {
+  font-size: 0.6rem;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.title2-span2 {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.4rem;
+}
+
+.title3-span1 {
+  font-size: 1.6rem;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.title3-span2 {
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.4rem;
+}
+
+.title4-span1 {
+  font-size: 2rem;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+
+.title5-span1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+
+.title5-span2 {
+  font-size: 0.8rem;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.8rem;
+  padding-left: 1rem;
+}

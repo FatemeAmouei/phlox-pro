@@ -9,5 +9,6 @@ export interface circleProps {
   backgroundImage?: string;
   opacity?: number;
   border?: string;
+  borderRadius?: string;
   zIndex?: number;
 }

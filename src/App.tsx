@@ -1,18 +1,17 @@
-import Swipers from "./Swipers/Swipers";
-import Elementors from "./Elementors/Elementors";
-import Header from "./Header/Header/Header";
+import React from "react";
+import "./App.css";
+import { Routes, Route, useRoutes } from "react-router-dom";
 import Navbar from "./Header/Navbar/Navbar";
-import Articles from "./Articles/Articles";
+import routes from "./Routes/Routes";
 import Footer from "./Footer/Footer";
 
 function App() {
+  const router = useRoutes(routes);
+
   return (
     <>
       <Navbar />
-      <Header />
-      <Elementors />
-      <Swipers />
-      <Articles />
+      <div>{router}</div>
       <Footer />
     </>
   );

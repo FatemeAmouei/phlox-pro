@@ -1,20 +1,23 @@
 import React from "react";
 
-interface WidgetProps {
+interface ShopcompProps {
   width: string;
   height: string;
-  color?: string;
   children?: React.ReactNode;
 }
 
-const Widget: React.FC<WidgetProps> = ({ width, height, color, children }) => {
+const Shopcomp: React.FC<ShopcompProps> = ({
+  width,
+  height,
+
+  children,
+}) => {
   return (
     <div
-      className="widget-container"
+      className="Shopcomp-container"
       style={{
         width: width,
         height: height,
-        backgroundColor: color || "transparent",
       }}
     >
       {children}
@@ -22,4 +25,4 @@ const Widget: React.FC<WidgetProps> = ({ width, height, color, children }) => {
   );
 };
 
-export default Widget;
+export default Shopcomp;

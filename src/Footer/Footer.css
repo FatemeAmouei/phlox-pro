@@ -11,8 +11,12 @@
   flex-direction: row;
   height: 80%;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #20242a;
   padding-top: 3rem;
+  background-image: url(https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2021/02/Path_903-1.svg);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 .footer-top__right {

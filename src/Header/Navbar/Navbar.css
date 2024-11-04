@@ -20,6 +20,8 @@
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.3em;
+  text-decoration: none;
+
 }
 
 .navbar-center__title:hover {

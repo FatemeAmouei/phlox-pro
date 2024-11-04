@@ -6,13 +6,14 @@ import { CiSearch } from "react-icons/ci";
 import { MdFavoriteBorder } from "react-icons/md";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { NavLink } from "react-router-dom";
 
 const NavbarComponent: React.FC = () => {
   return (
     <Navbar expand="lg" className="bg-body-dark navbar" data-bs-theme="light">
       <Container fluid dir="rtl" className="d-flex justify-content-between">
         <Navbar.Brand href="#">
-          <a href="" title="فروشگاه لوازم جانبی فلوکس پرو">
+          <a href="#" title="فروشگاه لوازم جانبی فلوکس پرو">
             <img
               className="navbar-right__img"
               src="https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/cropped-logo20x-min.png"
@@ -25,21 +26,21 @@ const NavbarComponent: React.FC = () => {
           className="my-2 my-lg-0 d-flex justify-content-between navbar-center"
           navbarScroll
         >
-          <Nav.Link href="#" className="navbar-center__title active">
+          <NavLink to="/" className="navbar-center__title active">
             خانه
-          </Nav.Link>
-          <Nav.Link href="#" className="navbar-center__title">
+          </NavLink>
+          <NavLink to="/shop" className="navbar-center__title">
             فروشگاه
-          </Nav.Link>
-          <Nav.Link href="#" className="navbar-center__title">
+          </NavLink>
+          <NavLink to="/blog" className="navbar-center__title">
             وبلاگ
-          </Nav.Link>
-          <Nav.Link href="#" className="navbar-center__title">
+          </NavLink>
+          <NavLink to="/aboutus" className="navbar-center__title">
             درباره ما
-          </Nav.Link>
-          <Nav.Link href="#" className="navbar-center__title">
+          </NavLink>
+          <NavLink to="/contact" className="navbar-center__title">
             تماس با ما
-          </Nav.Link>
+          </NavLink>
         </Nav>
 
         <Nav

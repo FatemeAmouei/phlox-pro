@@ -13,6 +13,7 @@ function Circle({
   backgroundImage,
   opacity,
   border,
+  borderRadius,
   zIndex,
 }: circleProps) {
   return (
@@ -30,6 +31,7 @@ function Circle({
           backgroundImage: backgroundImage,
           opacity,
           border,
+          borderRadius,
           zIndex,
         }}
       ></div>

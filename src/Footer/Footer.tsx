@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <p className="copyright">
-            © طراحی شده توسط آورتا <span>فاطمه عموئی</span>
+            © طراحی شده توسط <span>فاطمه عموئی</span>
           </p>
         </div>
       </div>

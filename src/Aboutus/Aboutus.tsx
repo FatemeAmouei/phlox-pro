@@ -3,7 +3,7 @@ import "./Aboutus.css";
 import Accordion from "react-bootstrap/Accordion";
 import Circle from "../Header/Circle/Circle";
 
-export default function Aboutus() {
+const Aboutus: React.FC = () => {
   return (
     <div>
       <div className="aboutus-container">
@@ -155,4 +155,6 @@ export default function Aboutus() {
       </div>
     </div>
   );
-}
+};
+
+export default Aboutus;

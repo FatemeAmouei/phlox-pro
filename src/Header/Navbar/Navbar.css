@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #21252b;
   margin-top: 0;
   height: 20vh;
 }
@@ -15,13 +15,12 @@
 }
 
 .navbar-center__title {
-  color: #3d3d3d;
+  color: #FFFFFF20;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.3em;
   text-decoration: none;
-
 }
 
 .navbar-center__title:hover {
@@ -32,26 +31,94 @@
   color: #FFF !important;
 }
 
+.navbar-center .active::after {
+  content: ".";
+  position: relative;
+  bottom: 100%;
+  left: 50%;
+  font-size: 2.5rem;
+}
+
 .navbar-left {
   width: 20%;
   padding-left: 3rem;
 }
 
+.navbar-left__iconsearch,
 .navbar-left__icon {
   color: #FFF;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 2.2rem;
-  background-color: rgba(33, 150, 243, .2);
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.navbar-left__icon {
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
 .navbar-left__icon:hover {
   background-color: #ffd62c;
+  opacity: 0.8;
   color: #FFF;
+}
+
+.navbar-left__iconsearch:hover {
+  color: #ffd62c;
+}
+
+.navbar-tooltip {
+  background-color: #242930;
+  opacity: 0.2;
+  width: 350px;
+  max-width: 400px;
+  color: #FFF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-left: 5rem;
+  line-height: 5rem;
+  border-radius: 30px;
+}
+
+.navbar-tooltip .tooltip-inner {
+  color: inherit;
+  text-wrap: nowrap;
+  width: 100%;
+  background-color: transparent;
+  margin-left: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.navbar-tooltip__icon {
+  color: #FFF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 10rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-left__badge {
+  color: #FFF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  position: relative;
+  left: 23%;
 }

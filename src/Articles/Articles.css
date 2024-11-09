@@ -1,5 +1,5 @@
 .main-container__article {
-  background-color: rgba(1, 1, 1, 0.9);
+  background-color: #21252b;
   display: flex;
   flex-direction: column;
 }
@@ -54,7 +54,8 @@
 
 }
 
-.main-elementor__subtitle {
+.main-elementor__subtitles {
+
   font-size: 1.3rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #657185;

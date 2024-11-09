@@ -2,11 +2,13 @@ import React from "react";
 import "./Elementors.css";
 import Widget from "./Widget/Widget";
 import Circle from "../Header/Circle/Circle";
+import { useNavigate } from "react-router-dom";
+
 const widgetData = [
   {
     id: 1,
     title: "ساعت هوشمند",
-    subtitle: "منتخب کالا",
+    subtitle: "منتخب کالاهای",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/op_daniel-korpai-tE_kGhscUTU-unsplash-min.png",
     parg: "مشاهده محصولات",
     imgClass: "image-smartwatch",
@@ -14,7 +16,7 @@ const widgetData = [
   {
     id: 2,
     title: "پخش‌کننده موزیک",
-    subtitle: "منتخب کالا",
+    subtitle: "منتخب کالاهای",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/op_90-angle-IsIQXkDENBo-unsplash-1-min.png",
     parg: "مشاهده محصولات",
     imgClass: "image-musicplayer",
@@ -22,7 +24,7 @@ const widgetData = [
   {
     id: 3,
     title: "هدفون وایـرلس",
-    subtitle: "منتخب کالا",
+    subtitle: "منتخب کالاهای",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/op_black-headphones-flatl-lay-9CB58NW-min.png",
     parg: "مشاهده محصولات",
     imgClass: "image-headphone",
@@ -30,13 +32,19 @@ const widgetData = [
   {
     id: 4,
     title: "دسته‌ی گیمینگ",
-    subtitle: "منتخب کالا",
+    subtitle: "منتخب کالاهای",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/op_photo-1554213352-5ffe6534af08-min.png",
     parg: "مشاهده محصولات",
     imgClass: "image-game",
   },
 ];
 export default function Elementors() {
+  const navigate = useNavigate();
+  const Gotoshop = () => {
+    navigate("/shop");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div className="main-container">
@@ -58,7 +66,10 @@ export default function Elementors() {
                       <h2 className="main-leftelementor__title">
                         {data.title}
                       </h2>
-                      <ul className="main-leftelementor__parg">
+                      <ul
+                        className="main-leftelementor__parg"
+                        onClick={Gotoshop}
+                      >
                         <li className="main-leftelementor__list">
                           {data.parg}
                         </li>
@@ -95,7 +106,10 @@ export default function Elementors() {
                     <h2 className="main-rightelementor__title">
                       اسپیکر بلوتوثی
                     </h2>
-                    <ul className="main-rightelementor__parg">
+                    <ul
+                      className="main-rightelementor__parg"
+                      onClick={Gotoshop}
+                    >
                       <li className="main-rightelementor__list">
                         مشاهده محصولات
                       </li>

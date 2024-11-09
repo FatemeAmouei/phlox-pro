@@ -18,9 +18,30 @@ export default function Footer() {
               رایانه متصل شوند.
             </p>
             <ul className="footer-right__icons">
-              <li className="footer-right__icon">bank 1</li>
-              <li className="footer-right__icon">bank 2</li>
-              <li className="footer-right__icon">bank3</li>
+              <li className="footer-right__icon">
+                <img
+                  src="/img/mehriran.png"
+                  alt="بانک مهر ایران"
+                  width="40"
+                  className="footer-icon__img1"
+                />
+              </li>
+              <li className="footer-right__icon">
+                <img
+                  src="/img/melat.png"
+                  alt="بانک ملت"
+                  width="42"
+                  className="footer-icon__img2"
+                />
+              </li>
+              <li className="footer-right__icon">
+                <img
+                  src="/img/refah.png"
+                  alt="بانک رفاه"
+                  width="40"
+                  className="footer-icon__img3"
+                />
+              </li>
             </ul>
           </div>
           <div className="footer-top__center">

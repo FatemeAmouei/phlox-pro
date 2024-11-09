@@ -6,6 +6,7 @@ const widgetData = [
     id: 1,
     title: "قیمت گوشی‌های هوشمند از برند شیائومی در هند کاهش یافت",
     subtitle: "گیمینگ",
+    subtitle2: "هیولای وردپرس",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/90-angle-IsIQXkDENBo-unsplash-1-min-637x388.jpeg",
     parg: "اِلِکترونیک دانشی است شامل فیزیک، مهندسی، فناوری و کاربردهایی که با جریان و کنترل الکترون‌ها در خلا و ماده سروکار دارد. در الکترونیک برای کنترل جریان ...",
   },
@@ -13,6 +14,7 @@ const widgetData = [
     id: 2,
     title: "تاریخ دقیق عرضه و رونمایی گوشی جدید تاشوی سامسونگ اعلام شد",
     subtitle: "تکنولوژی ",
+    subtitle2: "هیولای وردپرس",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/krisztian-tabori-IyaNci0CyRk-unsplash-min-637x388.jpeg",
     parg: "اِلِکترونیک دانشی است شامل فیزیک، مهندسی، فناوری و کاربردهایی که با جریان و کنترل الکترون‌ها در خلا و ماده سروکار دارد. در الکترونیک برای کنترل جریان ...",
   },
@@ -21,6 +23,7 @@ const widgetData = [
     title:
       "تبلیغات جستجوی گوگل همه را متحیر کرده‌است و تمامی رکوردها را شکسته است",
     subtitle: "دکوراسیون",
+    subtitle2: "هیولای وردپرس",
     img: "https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/daniel-korpai-3qELJetpWsU-unsplash-min-637x388.jpeg",
     parg: "اِلِکترونیک دانشی است شامل فیزیک، مهندسی، فناوری و کاربردهایی که با جریان و کنترل الکترون‌ها در خلا و ماده سروکار دارد. در الکترونیک برای کنترل جریان ...",
   },
@@ -44,9 +47,10 @@ export default function Articles() {
                     className="main-elementor__img"
                   />
                   <div className="main-elementor__text">
-                    <h4 className="main-elementor__subtitle">
-                      {data.subtitle}
-                    </h4>
+                    <div className="main-elementor__subtitles">
+                      <h4>{data.subtitle}</h4>
+                      <h4>{data.subtitle2}</h4>
+                    </div>
                     <h2 className="main-elementor__title">{data.title}</h2>
                     <p className="main-elementor__parg">{data.parg}</p>
                   </div>

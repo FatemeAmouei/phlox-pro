@@ -3,6 +3,7 @@ import Blogs from "../Blogs/Blogs";
 import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
 import Contactus from "../Contactus/Contactus";
+import Blog from "../Blogs/Blog/Blog";
 
 const routes = [
   {
@@ -14,7 +15,7 @@ const routes = [
     element: <Shop />,
   },
   {
-    path: "/blog",
+    path: "/blogs",
     element: <Blogs />,
   },
   {
@@ -24,6 +25,10 @@ const routes = [
   {
     path: "/contact",
     element: <Contactus />,
+  },
+  {
+    path: "/blogs/:id",
+    element: <Blog />,
   },
 ];
 

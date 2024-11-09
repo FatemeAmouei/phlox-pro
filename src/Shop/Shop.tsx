@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Shopcomp from "./Shopcomp";
 import "../Shop/Shop.css";
 import Nav from "react-bootstrap/Nav";
 import { MdFavoriteBorder } from "react-icons/md";
 import Pagination from "react-bootstrap/Pagination";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 const ShopcompData = [
   {
@@ -56,14 +58,54 @@ const ShopcompData = [
   },
 ];
 export default function Shop() {
+  const [buttonTexts, setButtonTexts] = useState<Record<number, string>>(
+    ShopcompData.reduce((acc, item) => {
+      acc[item.id] = item.btn;
+      return acc;
+    }, {} as Record<number, string>)
+  );
+
+  const handleMouseEnter = (id: number) => {
+    setButtonTexts((prev) => ({
+      ...prev,
+      [id]: "افزودن به سبد خرید",
+    }));
+  };
+
+  const handleMouseLeave = (id: number) => {
+    const originalBtn = ShopcompData.find((item) => item.id === id)?.btn;
+    setButtonTexts((prev) => ({
+      ...prev,
+      [id]: originalBtn || "",
+    }));
+  };
+
   return (
     <>
       <div className="shop-main__container">
         <section className="shop-main">
-          <div className="shop-text">
-            <h2 className="shop-title">آخرین محصولات</h2>
-            <h4 className="shop-subtitle">جدیدترین کالاهای فروشگاه</h4>
+          <div className="shop-header">
+            <div className="shop-text">
+              <h2 className="shop-title">آخرین محصولات</h2>
+              <h4 className="shop-subtitle">جدیدترین کالاهای فروشگاه</h4>
+            </div>
+            <div className="shop-dropdown">
+              <Dropdown className="d-inline" autoClose="outside">
+                <Dropdown.Toggle id="dropdown-autoclose-outside">
+                  مرتب‌سازی بر اساس:
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#">پیش فرض</Dropdown.Item>
+                  <Dropdown.Item href="#">محبوبیت </Dropdown.Item>
+                  <Dropdown.Item href="#">امتیازدهی</Dropdown.Item>
+                  <Dropdown.Item href="#">جدیدترین ها</Dropdown.Item>
+                  <Dropdown.Item href="#">پایین ترین قیمت</Dropdown.Item>
+                  <Dropdown.Item href="#">بالاترین قیمت</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
           </div>
+
           <section className="main-shop">
             {ShopcompData.map((data) => (
               <div key={data.id} className="shopmain-elementor">
@@ -79,7 +121,13 @@ export default function Shop() {
                         alt="#"
                         className="shopmain-elementor__img"
                       />
-                      <a className="shopmain-elementor__btn">{data.btn}</a>
+                      <a
+                        className="shopmain-elementor__btn"
+                        onMouseEnter={() => handleMouseEnter(data.id)}
+                        onMouseLeave={() => handleMouseLeave(data.id)}
+                      >
+                        {buttonTexts[data.id]}
+                      </a>
                     </div>
                   </Shopcomp>
                 </div>
@@ -88,7 +136,6 @@ export default function Shop() {
           </section>
           <div className="shopmain-page">
             <Pagination>
-              <Pagination.Prev />
               <Pagination.Item active>{1}</Pagination.Item>
               <Pagination.Item>{2}</Pagination.Item> <Pagination.Next />
               <Pagination.Last>آخرین</Pagination.Last>

@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
 import Contactus from "../Contactus/Contactus";
 import Blog from "../Blogs/Blog/Blog";
+import Basket from "../Basketshop/Basket";
 
 const routes = [
   {
@@ -29,6 +30,10 @@ const routes = [
   {
     path: "/blogs/:id",
     element: <Blog />,
+  },
+  {
+    path: "/Basket",
+    element: <Basket />,
   },
 ];
 

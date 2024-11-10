@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -13,13 +13,41 @@ import { NavLink } from "react-router-dom";
 import SearchModal from "../SearvhModal/Searchmodal";
 import Badge from "react-bootstrap/Badge";
 import { SlBasket } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 const NavbarComponent: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
+  const [basketCount, setBasketCount] = useState<number>(0);
 
   const handleSearchModal = () => {
     setShowModal(true);
   };
+
+  const updateBasketCount = () => {
+    const currentBasket = JSON.parse(
+      localStorage.getItem("selectedProducts") || "[]"
+    );
+    const totalItems = currentBasket.reduce(
+      (acc: number, product: { count: number }) => acc + product.count,
+      0
+    );
+    setBasketCount(totalItems);
+  };
+
+  const navigate = useNavigate();
+  const handleBasketpage = () => {
+    navigate("/Basket");
+    window.scrollTo(0, 0);
+  };
+
+  const LogoHandler = () => {
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    updateBasketCount();
+  }, []);
 
   return (
     <>
@@ -31,6 +59,7 @@ const NavbarComponent: React.FC = () => {
                 className="navbar-right__img"
                 src="https://themes.wpmonster.co/Phlox/new/gadget-shop/wp-content/uploads/2024/04/cropped-logo20x-min.png"
                 alt="لوگو"
+                onClick={LogoHandler}
               />
             </a>
           </Navbar.Brand>
@@ -118,22 +147,38 @@ const NavbarComponent: React.FC = () => {
               <FaRegCircleUser />
             </Nav.Link>
 
-            <OverlayTrigger
-              placement="bottom"
-              overlay={
-                <Tooltip id="tooltip-bottom" className="navbar-tooltip">
-                  .. سبد خرید خالیست
-                  <Nav.Link href="#" className="navbar-tooltip__icon">
-                    <SlBasket />
-                  </Nav.Link>
-                </Tooltip>
-              }
-            >
-              <Nav.Link href="#" className="navbar-left__icon">
+            {basketCount === 0 && (
+              <OverlayTrigger
+                placement="bottom"
+                overlay={
+                  <Tooltip id="tooltip-bottom" className="navbar-tooltip">
+                    .. سبد خرید خالیست
+                    <Nav.Link href="#" className="navbar-tooltip__icon">
+                      <SlBasket />
+                    </Nav.Link>
+                  </Tooltip>
+                }
+              >
+                <Nav.Link
+                  href="#"
+                  className="navbar-left__icon"
+                  onClick={handleBasketpage}
+                >
+                  <HiOutlineShoppingBag />
+                </Nav.Link>
+              </OverlayTrigger>
+            )}
+
+            {basketCount > 0 && (
+              <Nav.Link
+                href="#"
+                className="navbar-left__icon"
+                onClick={handleBasketpage}
+              >
                 <HiOutlineShoppingBag />
               </Nav.Link>
-            </OverlayTrigger>
-            <Badge className="navbar-left__badge">0</Badge>
+            )}
+            <Badge className="navbar-left__badge">{basketCount}</Badge>
           </Nav>
         </Container>
       </Navbar>

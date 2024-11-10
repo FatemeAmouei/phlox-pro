@@ -69,12 +69,10 @@
   margin-top: 3rem;
   margin-left: 4rem;
   line-height: 6rem;
-
 }
 
 .form-row {
   margin-bottom: 15px;
-
 }
 
 .form-label {
@@ -91,14 +89,12 @@
   border-radius: 50px;
   padding: 1.2rem;
   background-color: #21252b;
-
 }
 
 .form-control:focus {
   border-color: #f5c506;
   box-shadow: 0 0 5px #f5c506;
   background-color: #21252b;
-
 }
 
 textarea {
@@ -127,6 +123,8 @@ textarea {
 
 .contactus__info {
   margin-top: 6rem;
+  height: 80vh;
+
 }
 
 .contactus-sliders {
@@ -171,7 +169,6 @@ textarea {
 .contact-map__iframe {
   width: 100%;
   height: 100%;
-  margin-top: 3rem;
   border: none;
   background: transparent;
   filter: grayscale(90%) brightness(0.8);

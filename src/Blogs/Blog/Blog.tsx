@@ -10,7 +10,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 
 export default function Blog() {
-  const { id } = useParams<{ id: string }>(); // گرفتن id از پارامترهای URL
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
   const blogData: Data[] = [

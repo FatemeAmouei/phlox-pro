@@ -1,6 +1,9 @@
 import React from "react";
 import "./Articles.css";
 import Widget from "../Elementors/Widget/Widget";
+import { useNavigate } from "react-router-dom";
+import { data } from "../Blogs/Blog/Blog.type";
+
 const widgetData = [
   {
     id: 1,
@@ -29,6 +32,13 @@ const widgetData = [
   },
 ];
 export default function Articles() {
+  const navigate = useNavigate();
+
+  const GotoBlog = (blog: data) => {
+    navigate(`/blogs/${blog.id}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div className="main-container__article">
@@ -51,7 +61,12 @@ export default function Articles() {
                       <h4>{data.subtitle}</h4>
                       <h4>{data.subtitle2}</h4>
                     </div>
-                    <h2 className="main-elementor__title">{data.title}</h2>
+                    <h2
+                      className="main-elementor__title"
+                      onClick={() => GotoBlog(data)}
+                    >
+                      {data.title}
+                    </h2>
                     <p className="main-elementor__parg">{data.parg}</p>
                   </div>
                 </Widget>
